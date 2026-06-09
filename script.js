@@ -1,3 +1,5 @@
+console.log("Script chargé");
+
 const { exec } = require("child_process");
 
 function autoCommit() {
