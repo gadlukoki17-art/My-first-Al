@@ -11,7 +11,22 @@
     <header class="border-b border-gray-600 ">
         <nav class="flex m-4 justify-between items-center">
             <h1 class="text-xl font-bold">ChatBot</h1>
-            <i class="fa-solid fa-bars text-center pb-2"></i>
+            <i id="burger" fa-solid fa-bars text-center pb-2"></i>
+            <div id="menu" class="hidden absolute top-16 right-4 bg-white shadow-lg rounded-xl p-4 w-48">
+    <h2 class="font-bold mb-2">Paramètres</h2>
+
+    <button class="block w-full text-left p-2 hover:bg-gray-100 rounded">
+        Mode sombre
+    </button>
+
+    <button class="block w-full text-left p-2 hover:bg-gray-100 rounded">
+        Langue
+    </button>
+
+    <button class="block w-full text-left p-2 hover:bg-gray-100 rounded">
+        Reset chat
+    </button>
+</div>
         </nav>
     </header>
     <main class="m-4 h-screen flex flex-col">
