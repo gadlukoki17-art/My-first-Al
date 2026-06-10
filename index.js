@@ -1,12 +1,13 @@
 const btn = document.getElementById("btn");
 const question = document.getElementById("question");
 const reponse = document.getElementById("reponse");
+const review = document.getElementById(review)
 
 btn.addEventListener("click", () => {
     const texte = question.value.toLowerCase();
 
     // message utilisateur
-    reponse.innerHTML += `
+    review.innerHTML += `
         <p class="bg-blue-100 p-2 rounded-xl mb-2">
             ${texte}
         </p>
