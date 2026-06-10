@@ -1,4 +1,3 @@
-
 const btn = document.getElementById("btn");
 const question = document.getElementById("question");
 const reponse = document.getElementById("reponse");
@@ -6,17 +5,33 @@ const reponse = document.getElementById("reponse");
 btn.addEventListener("click", () => {
     const texte = question.value.toLowerCase();
 
+    // message utilisateur
+    reponse.innerHTML += `
+        <p class="bg-blue-100 p-2 rounded-xl mb-2">
+            ${texte}
+        </p>
+    `;
+
+    let bot = "";
+
     if (texte.includes("bonjour")) {
-        reponse.textContent = "Hey, c'est comment mon gars 👋";
+        bot = "Hey, c'est comment mon gars 👋";
     } else if (texte.includes("heure")) {
-        reponse.textContent = `Il est ${new Date().toLocaleTimeString()}`;
+        bot = `Il est ${new Date().toLocaleTimeString()}`;
     } else if (texte.includes("nom")) {
-        reponse.textContent = "Je suis une mini IA en JavaScript. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        bot = "Je suis une mini IA en JavaScript.";
     } else if (texte.includes("salut")) {
-        reponse.textContent = "Hey, quoi de neuf ?"; 
+        bot = "Hey, quoi de neuf ?";
     } else {
-        reponse.textContent = "Désolé, je ne comprends pas encore cette question.";
+        bot = "Désolé, je ne comprends pas encore cette question.";
     }
+
+    // réponse bot
+    reponse.innerHTML += `
+        <p class="bg-gray-100 p-2 rounded-xl mb-2">
+            ${bot}
+        </p>
+    `;
 
     question.value = "";
 });
