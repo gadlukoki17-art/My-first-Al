@@ -1,13 +1,12 @@
 const btn = document.getElementById("btn");
 const question = document.getElementById("question");
 const reponse = document.getElementById("reponse");
-const review = document.getElementById(review);
 
 btn.addEventListener("click", () => {
     const texte = question.value.toLowerCase();
 
     // message utilisateur
-    review.innerHTML += `
+    reponse.innerHTML += `
         <p class="bg-blue-100 p-2 rounded-xl mb-2">
             ${texte}
         </p>
@@ -20,7 +19,7 @@ btn.addEventListener("click", () => {
     } else if (texte.includes("heure")) {
         bot = `Il est ${new Date().toLocaleTimeString()}`;
     } else if (texte.includes("nom")) {
-        bot = "Je suis une mini IA en JavaScript.";
+        bot = "Je suis une mini IA en JavaScript. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
     } else if (texte.includes("salut")) {
         bot = "Hey, quoi de neuf ?";
     } else {
