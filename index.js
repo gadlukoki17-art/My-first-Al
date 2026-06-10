@@ -30,10 +30,12 @@ btn.addEventListener("click", () => {
 
     // réponse bot
     reponse.innerHTML += `
-        <p class="bg-gray-100 p-2 rounded-xl mb-2">
-            ${bot}
-        </p>
-    `;
+        <div class="flex justify-start mb-2">
+            <p class="bg-gray-100 p-2 rounded-xl mb-2">
+             ${bot}
+            </p>
+        </div>    
+    `;  
 
     question.value = "";
 });
