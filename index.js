@@ -1,7 +1,7 @@
 const btn = document.getElementById("btn");
 const question = document.getElementById("question");
 const reponse = document.getElementById("reponse");
-const review = document.getElementById(review)
+const review = document.getElementById(review);
 
 btn.addEventListener("click", () => {
     const texte = question.value.toLowerCase();
