@@ -7,9 +7,11 @@ btn.addEventListener("click", () => {
 
     // message utilisateur
     reponse.innerHTML += `
-        <p class="bg-blue-100 p-2 rounded-xl mb-2">
-            ${texte}
-        </p>
+        <div class="flex justify-end mb-2">
+            <p class="bg-blue-100 p-2 rounded-xl mb-2">
+              ${texte}
+            </p>
+        </div>    
     `;
 
     let bot = "";
@@ -19,7 +21,7 @@ btn.addEventListener("click", () => {
     } else if (texte.includes("heure")) {
         bot = `Il est ${new Date().toLocaleTimeString()}`;
     } else if (texte.includes("nom")) {
-        bot = "Je suis une mini IA en JavaScript. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        bot = "Je suis une mini IA en JavaScript.";
     } else if (texte.includes("salut")) {
         bot = "Hey, quoi de neuf ?";
     } else {
