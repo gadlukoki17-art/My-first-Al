@@ -46,3 +46,18 @@ const menu = document.getElementById("menu");
 burger.addEventListener("click", () => {
     menu.classList.toggle("hidden");
 });
+
+const btnTheme = document.getElementById("theme");
+
+btnTheme.addEventListener("click", () => {
+    document.body.classList.toggle("bg-gray-900");
+    document.body.classList.toggle("text-white");
+
+    const isDark = document.body.classList.contains("bg-gray-900");
+
+    if (isDark) {
+        btnTheme.textContent = "Mode clair ☀️";
+    } else {
+        btnTheme.textContent = "Mode sombre 🌙";
+    }
+});
